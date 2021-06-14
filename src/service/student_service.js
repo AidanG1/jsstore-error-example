@@ -1,17 +1,17 @@
 import { connection } from './jsstore_con'
 
 export class StudentService {
-  constructor() {
+  constructor () {
     this.tableName = 'Students'
   }
 
-  getStudents() {
+  getStudents () {
     return connection.select({
       from: this.tableName
     })
   }
 
-  addStudent(student) {
+  addStudent (student) {
     return connection.insert({
       into: this.tableName,
       values: [student],
@@ -19,7 +19,7 @@ export class StudentService {
     })
   }
 
-  getStudentById(id) {
+  getStudentById (id) {
     return connection.select({
       from: this.tableName,
       where: {
@@ -28,7 +28,7 @@ export class StudentService {
     })
   }
 
-  removeStudent(id) {
+  removeStudent (id) {
     return connection.remove({
       from: this.tableName,
       where: {
@@ -37,7 +37,7 @@ export class StudentService {
     })
   }
 
-  updateStudentById(student) {
+  updateStudentById (student) {
     return connection.update({
       in: this.tableName,
       set: {
