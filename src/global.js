@@ -1,3 +1,4 @@
-export class Global {
-    static isIndexedDbSupported = true;
+
+export const Global = {
+    isIndexedDbSupported: true
 }

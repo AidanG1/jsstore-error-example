@@ -85,7 +85,7 @@ export default {
   methods: {
     async add () {
       try {
-        const studentsAdded = await this.service.addStudent(this.newStudent)
+        const studentsAdded = await this.service.addStudent({...this.newStudent})
         this.$emit('add-item', studentsAdded[0])
         this.clear()
       } catch (ex) {
